@@ -22,15 +22,11 @@ Certifique-se de ter as seguintes ferramentas instaladas:
    ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
 
-2. Instale as dependências
-   ```bash
-   python -m venv venv
-
-3. Instale as dependências:
+2. Instale as dependências:
    ```bash
    pip install -r requirements.txt
 
-4. Execute os testes para garantir que tudo está funcionando:
+3. Execute os testes para garantir que tudo está funcionando:
    ```bash
    pytest
 
