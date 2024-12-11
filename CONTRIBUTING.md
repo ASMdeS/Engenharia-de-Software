@@ -1,6 +1,8 @@
 # Bem-vindo(a), Colaborador(a)!
 
-Estamos muito felizes que você esteja aqui e ansiosos para receber suas contribuições. Este documento tem como objetivo orientá-lo sobre como contribuir com o nosso projeto relacionado ao mercado financeiro, ajudando a desenvolver visualizações de fundos de investimentos e simulações de carteiras históricas.
+Estamos muito felizes em receber você como colaborador(a) do nosso projeto! Suas contribuições são fundamentais para aprimorarmos nossa plataforma voltada ao mercado financeiro. Este documento tem como objetivo guiá-lo(a) em como participar do desenvolvimento, ajudando a criar visualizações interativas de fundos de investimentos e implementar simulações históricas de carteiras.  
+
+Seja você um(a) especialista em desenvolvimento ou alguém começando agora, estamos ansiosos para trabalhar juntos e tornar este projeto ainda mais impactante para quem deseja autonomia na análise financeira.
 
 ---
 
