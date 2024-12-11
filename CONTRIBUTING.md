@@ -25,7 +25,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 2. Instale as dependências
    ```bash
    python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
 
 3. Instale as dependências:
    ```bash
@@ -34,3 +33,11 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 4. Execute os testes para garantir que tudo está funcionando:
    ```bash
    pytest
+
+## Processo de Submissão de Código e Revisão
+
+### Criação de Branches
+Crie uma branch para suas alterações:
+```bash
+git checkout -b minha-branch
+
