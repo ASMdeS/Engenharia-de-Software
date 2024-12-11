@@ -23,7 +23,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
    git clone https://github.com/seu-usuario/seu-repositorio.git
 
 2. Instale as dependências
-3. 
+    
 ```python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
