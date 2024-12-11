@@ -25,3 +25,9 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 2. Instale as dependências
 ```python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
+
+3. Instale as dependências:
+```pip install -r requirements.txt
+
+4. Execute os testes para garantir que tudo está funcionando:
+```pytest
