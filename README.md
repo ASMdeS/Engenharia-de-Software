@@ -52,7 +52,7 @@ Para acessar a Estrtura organizacional visite o miro em [Modelagem C4](https://m
 - O sistema deve consultar dados financeiros disponíveis em API's abertas
 
 ## Orientações sobre como contribuir para o projeto.
-  Por favor, leia o [COLABORACAO.md](https://github.com/ASMdeS/Engenharia-de-Software/blob/44800f6b4d93a4ae8fa1cba1f65f0bc61f58674e/CONTRIBUTING.md) para obter detalhes do processo para nos enviar pedidos de contribuição
+  Por favor, leia o [COLABORACAO.md]([https://github.com/ASMdeS/Engenharia-de-Software/blob/44800f6b4d93a4ae8fa1cba1f65f0bc61f58674e/CONTRIBUTING.md](https://github.com/ASMdeS/Engenharia-de-Software/blob/main/CONTRIBUTING.md)) para obter detalhes do processo para nos enviar pedidos de contribuição
 
 ## Equipe
  - Rafael Mourato (GP/Dev)
