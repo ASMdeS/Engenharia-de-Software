@@ -9,7 +9,7 @@
   Funcionalidades:
   - Backtest para análise de carteira
   - Simulações financeiras de investimento
-  - Análises financeiras em dashboards e indicadores
+  - Análises financeiras em dashboards e indicadores como DRE, balanço patrimonial e Fluxo de caixa.
 
 
 ## Estrutura organizacional do código
