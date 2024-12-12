@@ -38,6 +38,7 @@ Para acessar a Estrtura organizacional visite o miro em [Modelagem C4](https://m
 - [x] Definir ideia do Projeto
 - [x] Estruturação da equipe
 ## Requisitos
+  Por meio de pesquisas sobre o mercado financeiro, documentos na área e conhecimneto sobre o contexto, conseguimos fazer um levantamento e sugestão de requisitos iniciais para a solução pensada.
 ### Requisitos Funcionais
 - O sistema deve permitir que os usuários criem e gerenciem suas carteiras de investimentos.
 - O sistema deve exibir informações financeiras detalhadas sobre ações e fundos, como preço atual, variação diária e histórico de preços.
