@@ -16,7 +16,7 @@ Seja você um(a) especialista em desenvolvimento ou alguém começando agora, es
 
 ### Pré-requisitos
 Certifique-se de ter as seguintes ferramentas instaladas:
-- Python 3.8 ou superior
+- Python 3.9 ou superior
 - Git
 
 ### Etapas
