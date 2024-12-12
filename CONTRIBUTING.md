@@ -16,8 +16,9 @@ Seja você um(a) especialista em desenvolvimento ou alguém começando agora, es
 
 ### Pré-requisitos
 Certifique-se de ter as seguintes ferramentas instaladas:
-- Python 3.9 ou superior
-- Git
+- Python 3.9+
+- pip (gerenciador de pacotes do Python)
+- Git (opcional, mas recomendado)
 
 ### Etapas
 1. Faça um fork do repositório e clone-o localmente:
