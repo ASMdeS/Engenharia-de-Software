@@ -89,7 +89,6 @@ Para gerar relatórios de cobertura de testes:
 python -m pytest --cov=src tests/
 ```
 
-
 ### Erros de Importação de Bibliotecas
 
 - Certifique-se de que todas as dependências estão instaladas corretamente
@@ -106,8 +105,39 @@ python -m pytest --cov=src tests/
 
 ## Licença
 
-[Especificar a licença do projeto]
+### MIT License
+
+Este projeto está licenciado sob a MIT License - uma licença permissiva de código aberto que permite praticamente
+qualquer uso, incluindo comercial, com pouquíssimas restrições.
+
+```
+MIT License
+
+Copyright (c) [ano] [nome completo ou nome da organização]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ## Contato
+
+Arthur Santos Marinho de Souza (asms@cin.ufpe.br)
+Daniel Dias Martins Fernandes (dmdf@cin.ufpe.br)
+Rafael Mourato Dantas Vilar (rmdv@cin.ufpe.br)
 
 [Informações de contato do mantenedor do projeto]
