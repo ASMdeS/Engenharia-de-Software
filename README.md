@@ -24,7 +24,7 @@ Para acessar a Estrtura organizacional visite o miro em [Modelagem C4](https://m
 
   
 ## Guia para build local do sistema.
-  Para a Construção local do sistema consultar o [BUILD.md](https://github.com/ASMdeS/Engenharia-de-Software/blob/44800f6b4d93a4ae8fa1cba1f65f0bc61f58674e/BUILD.md). 
+  Para a Construção local do sistema consultar o [BUILD.md](https://github.com/ASMdeS/Engenharia-de-Software/blob/main/BUILD.md). 
 
 
 ## Lista de issues
