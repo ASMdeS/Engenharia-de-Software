@@ -47,9 +47,6 @@ INDEXES = {
     'JPN': '^N225',  # Japan - Nikkei 225
 }
 
-# Rodando a função para pegar o histórico dos índices
-index_data = get_index_data(INDEXES)
-
 # -----------------------------------------------------------------------------
 # Draw the actual page
 
@@ -63,6 +60,9 @@ Explore os índices dos mercados financeiros dos principais países.
 # Add some spacing
 ''
 ''
+
+# Rodando a função para pegar o histórico dos índices
+index_data = get_index_data(INDEXES)
 
 # Convertendo pandas Timestamps para Python datetime objects
 min_date = index_data['Date'].min().to_pydatetime()
