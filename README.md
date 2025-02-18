@@ -29,10 +29,11 @@ Para acessar a Estrtura organizacional visite o miro em [Modelagem C4](https://m
 
 ## Lista de issues
 ### Issues Abertas
-- [ ] Iniciar implementação de análise por empresa
+
 - [ ] Iniciar implementação de análise por país
 
 ### Issues Concluídas
+- [x] Iniciar implementação de análise por empresa
 - [x] Iniciar implementação de backtest
 - [x] Iniciar implementação da solução
 - [x] Seleção de ferramentas para construção
