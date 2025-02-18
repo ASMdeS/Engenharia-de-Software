@@ -29,10 +29,13 @@ Para acessar a Estrtura organizacional visite o miro em [Modelagem C4](https://m
 
 ## Lista de issues
 ### Issues Abertas
-- [ ] Iniciar implementação da solução
-- [ ] Seleção de ferramentas para construção
+- [ ] Iniciar implementação de análise por empresa
+- [ ] Iniciar implementação de análise por país
 
 ### Issues Concluídas
+- [x] Iniciar implementação de backtest
+- [x] Iniciar implementação da solução
+- [x] Seleção de ferramentas para construção
 - [x] Preparar entregas iniciais da RFP
 - [x] Montar os Requisitos funcionais e não funcionais 
 - [x] Definir ideia do Projeto

@@ -70,7 +70,7 @@ projeto_mercado_financeiro/
 Para iniciar a aplicação web:
 
 ```bash
-streamlit run app.py
+streamlit run Homepage.py
 ```
 
 ### Executar Testes
