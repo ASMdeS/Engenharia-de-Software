@@ -2,6 +2,7 @@
 import streamlit as st
 import yfinance as yf
 import pandas as pd
+import datetime
 
 # Definindo o título e o ícone do aplicativo
 st.set_page_config(
@@ -22,17 +23,8 @@ def get_ticker_data(ticker):
         pd.DataFrame: Um DataFrame contendo os dados históricos do ticker.
     """
     ticker_obj = yf.Ticker(ticker)  # Criando o objeto Ticker
-    stock_data = ticker_obj.history(period="5y", interval="1d")  # Obtendo dados históricos
+    stock_data = ticker_obj.history(period="10y", interval="1d")  # Obtendo dados históricos
     return stock_data[['Close']]  # Retorna apenas a coluna de fechamento
-
-# Definindo o ticker para análise
-ticker = st.text_input('Digite o Ticker:', 'AAPL')  # Ticker default é AAPL (Apple)
-
-# Rodando a função para pegar o histórico do ticker
-ticker_data = get_ticker_data(ticker)
-
-# Exibindo as primeiras linhas do DataFrame para verificar a estrutura dos dados
-st.write(ticker_data.head())  # Verifique a estrutura dos dados, especialmente a coluna de data
 
 # Exibindo o título da página
 '''
@@ -40,6 +32,11 @@ st.write(ticker_data.head())  # Verifique a estrutura dos dados, especialmente a
 
 Explore o desempenho do ticker no mercado financeiro.
 '''
+# Definindo o ticker para análise
+ticker = st.text_input('Digite o Ticker:', 'AAPL')  # Ticker default é AAPL (Apple)
+
+# Rodando a função para pegar o histórico do ticker
+ticker_data = get_ticker_data(ticker)
 
 # Adicionando espaço
 ''
@@ -71,6 +68,9 @@ st.line_chart(
 
 # Exibindo métricas do ticker
 st.header(f'Métricas do Ticker {ticker}', divider='gray')
+
+today = datetime.date.today()
+target_date = st.date_input('Digite a data:', today)  # Ticker default é AAPL (Apple)
 
 # Função para encontrar a data mais próxima de uma data alvo
 def get_closest_date(data, target_date):
