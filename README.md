@@ -30,6 +30,8 @@ Para acessar a Estrtura organizacional visite o miro em [Modelagem C4](https://m
 ## Lista de issues
 ### Issues Abertas
 
+- [ ] Iniciar testes
+- [ ] fazer a validação com cliente
 - [ ] Iniciar implementação de análise por país
 
 ### Issues Concluídas
