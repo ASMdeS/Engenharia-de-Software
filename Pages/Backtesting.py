@@ -10,7 +10,96 @@ st.set_page_config(
     page_icon=':chart_with_upwards_trend:',
 )
 
+# Backtesting Logic for Moving Average Crossover
+def backtest_ma_crossover(data, short_window, long_window):
+    """
+    Backtest a simple moving average crossover strategy.
 
+    Args:
+        data (pd.DataFrame): The historical market data.
+        short_window (int): The window for the short moving average.
+        long_window (int): The window for the long moving average.
+
+    Returns:
+        pd.DataFrame: The DataFrame with strategy results.
+    """
+    # Make a copy to avoid modifying the original data
+    results = data.copy()
+
+    # Calculate moving averages
+    results['Short MA'] = results['Close'].rolling(window=short_window).mean()
+    results['Long MA'] = results['Close'].rolling(window=long_window).mean()
+
+    # Generate trading signals
+    results['Signal'] = 0
+    # Reset index to avoid alignment issues
+    results = results.reset_index(drop=True)
+    # Now apply the conditions
+    results.loc[results['Short MA'] > results['Long MA'], 'Signal'] = 1
+    results.loc[results['Short MA'] <= results['Long MA'], 'Signal'] = -1
+
+    # Calculate returns
+    results['Daily Return'] = results['Close'].pct_change()
+    results['Strategy Return'] = results['Signal'].shift(1) * results['Daily Return']
+
+    # Fill NaN values with 0
+    results['Strategy Return'] = results['Strategy Return'].fillna(0)
+
+    return results
+
+
+# Backtesting Logic for RSI
+def backtest_rsi(data, window, oversold, overbought):
+    """
+    Backtest a Relative Strength Index (RSI) strategy.
+
+    Args:
+        data (pd.DataFrame): The historical market data.
+        window (int): The window for RSI calculation.
+        oversold (int): RSI level to consider oversold.
+        overbought (int): RSI level to consider overbought.
+
+    Returns:
+        pd.DataFrame: The DataFrame with strategy results.
+    """
+    # Make a copy to avoid modifying the original data
+    results = data.copy()
+
+    # Calculate daily price changes
+    delta = results['Close'].diff()
+
+    # Create up and down price movements
+    up = delta.copy()
+    up[up < 0] = 0
+    down = -delta.copy()
+    down[down < 0] = 0
+
+    # Calculate the EWMA (Exponential Weighted Moving Average)
+    roll_up = up.ewm(span=window).mean()
+    roll_down = down.ewm(span=window).mean()
+
+    # Calculate RS (Relative Strength)
+    RS = roll_up / roll_down
+
+    # Calculate RSI
+    results['RSI'] = 100.0 - (100.0 / (1.0 + RS))
+
+    # Generate trading signals
+    results['Signal'] = 0
+    # Reset index to avoid alignment issues
+    results = results.reset_index(drop=True)
+    # Now apply the conditions
+    results.loc[results['RSI'] < oversold, 'Signal'] = 1  # Buy signal when oversold
+    results.loc[results['RSI'] > overbought, 'Signal'] = -1  # Sell signal when overbought
+
+    # Calculate returns
+    results['Daily Return'] = results['Close'].pct_change()
+    results['Strategy Return'] = results['Signal'].shift(1) * results['Daily Return']
+
+    # Fill NaN values with 0
+    results['Strategy Return'] = results['Strategy Return'].fillna(0)
+
+    return results
 # ----------------------------------------------------------------------------
 # Helper functions
 
@@ -74,45 +163,6 @@ if stock_data is not None:
         short_window = st.sidebar.number_input('Janela da Média Móvel Curta:', min_value=1, value=10, step=1)
         long_window = st.sidebar.number_input('Janela da Média Móvel Longa:', min_value=1, value=30, step=1)
 
-
-        # Backtesting Logic for Moving Average Crossover
-        def backtest_ma_crossover(data, short_window, long_window):
-            """
-            Backtest a simple moving average crossover strategy.
-
-            Args:
-                data (pd.DataFrame): The historical market data.
-                short_window (int): The window for the short moving average.
-                long_window (int): The window for the long moving average.
-
-            Returns:
-                pd.DataFrame: The DataFrame with strategy results.
-            """
-            # Make a copy to avoid modifying the original data
-            results = data.copy()
-
-            # Calculate moving averages
-            results['Short MA'] = results['Close'].rolling(window=short_window).mean()
-            results['Long MA'] = results['Close'].rolling(window=long_window).mean()
-
-            # Generate trading signals
-            results['Signal'] = 0
-            # Reset index to avoid alignment issues
-            results = results.reset_index(drop=True)
-            # Now apply the conditions
-            results.loc[results['Short MA'] > results['Long MA'], 'Signal'] = 1
-            results.loc[results['Short MA'] <= results['Long MA'], 'Signal'] = -1
-
-            # Calculate returns
-            results['Daily Return'] = results['Close'].pct_change()
-            results['Strategy Return'] = results['Signal'].shift(1) * results['Daily Return']
-
-            # Fill NaN values with 0
-            results['Strategy Return'] = results['Strategy Return'].fillna(0)
-
-            return results
-
-
         # Run backtest with MA Crossover
         backtest_results = backtest_ma_crossover(filtered_data, short_window, long_window)
 
@@ -122,61 +172,6 @@ if stock_data is not None:
         window = st.sidebar.number_input('Janela do RSI:', min_value=1, value=14, step=1)
         oversold = st.sidebar.number_input('Nível de Sobrevenda:', min_value=1, max_value=100, value=30, step=1)
         overbought = st.sidebar.number_input('Nível de Sobrecompra:', min_value=1, max_value=100, value=70, step=1)
-
-
-        # Backtesting Logic for RSI
-        def backtest_rsi(data, window, oversold, overbought):
-            """
-            Backtest a Relative Strength Index (RSI) strategy.
-
-            Args:
-                data (pd.DataFrame): The historical market data.
-                window (int): The window for RSI calculation.
-                oversold (int): RSI level to consider oversold.
-                overbought (int): RSI level to consider overbought.
-
-            Returns:
-                pd.DataFrame: The DataFrame with strategy results.
-            """
-            # Make a copy to avoid modifying the original data
-            results = data.copy()
-
-            # Calculate daily price changes
-            delta = results['Close'].diff()
-
-            # Create up and down price movements
-            up = delta.copy()
-            up[up < 0] = 0
-            down = -delta.copy()
-            down[down < 0] = 0
-
-            # Calculate the EWMA (Exponential Weighted Moving Average)
-            roll_up = up.ewm(span=window).mean()
-            roll_down = down.ewm(span=window).mean()
-
-            # Calculate RS (Relative Strength)
-            RS = roll_up / roll_down
-
-            # Calculate RSI
-            results['RSI'] = 100.0 - (100.0 / (1.0 + RS))
-
-            # Generate trading signals
-            results['Signal'] = 0
-            # Reset index to avoid alignment issues
-            results = results.reset_index(drop=True)
-            # Now apply the conditions
-            results.loc[results['RSI'] < oversold, 'Signal'] = 1  # Buy signal when oversold
-            results.loc[results['RSI'] > overbought, 'Signal'] = -1  # Sell signal when overbought
-
-            # Calculate returns
-            results['Daily Return'] = results['Close'].pct_change()
-            results['Strategy Return'] = results['Signal'].shift(1) * results['Daily Return']
-
-            # Fill NaN values with 0
-            results['Strategy Return'] = results['Strategy Return'].fillna(0)
-
-            return results
-
 
         # Run backtest with RSI
         backtest_results = backtest_rsi(filtered_data, window, oversold, overbought)
