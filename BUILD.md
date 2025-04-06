@@ -79,8 +79,14 @@ Para rodar os testes unitários:
 
 ```bash
 python -m pytest tests/
-```
 
+```
+Se estiver no ambiente virtual:
+
+```bash
+pytest tests/
+
+```
 ### Geração de Relatórios
 
 Para gerar relatórios de cobertura de testes:
