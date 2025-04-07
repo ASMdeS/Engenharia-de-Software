@@ -30,11 +30,11 @@ Para acessar a Estrtura organizacional visite o miro em [Modelagem C4](https://m
 ## Lista de issues
 ### Issues Abertas
 
-- [ ] Iniciar testes
-- [ ] fazer a validação com cliente
-- [ ] Iniciar implementação de análise por país
 
 ### Issues Concluídas
+- [x] Iniciar testes
+- [x] fazer a validação com cliente
+- [x] Iniciar implementação de análise por país
 - [x] Iniciar implementação de análise por empresa
 - [x] Iniciar implementação de backtest
 - [x] Iniciar implementação da solução
@@ -65,4 +65,7 @@ Para acessar a Estrtura organizacional visite o miro em [Modelagem C4](https://m
  - Rafael Mourato (GP/Dev)
  - Arthur Santos (Dev)
  - Daniel Dias (Dev)
+
+## Documentação
+  A documentação do projeto está no link a seguir: https://docs.google.com/document/d/1xCgI5n_GRIFpAkxJd60ljNH3LBvXeUzhX_Y__lLaeOM/edit?tab=t.0#heading=h.kn9nfkml4i0a
 
