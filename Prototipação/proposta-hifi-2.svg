@@ -1,0 +1,171 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilos -->
+  <style>
+    .bg { fill: #ffffff; }
+    .header { fill: #1e40af; } /* Azul escuro */
+    .text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; fill: #333; }
+    .text-white { fill: white; }
+    .text-center { text-anchor: middle; }
+    .text-large { font-size: 24px; font-weight: bold; }
+    .text-medium { font-size: 18px; }
+    .text-small { font-size: 14px; }
+    .section-title { font-size: 22px; font-weight: bold; fill: #1e40af; }
+    .border { stroke: #e5e7eb; stroke-width: 2; fill: white; }
+    .card { fill: white; stroke: #e5e7eb; stroke-width: 1; rx: 8; ry: 8; filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); }
+    .button { fill: #1e40af; rx: 6; ry: 6; filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1)); }
+    .button-secondary { fill: #f0f4ff; stroke: #1e40af; stroke-width: 1; rx: 6; ry: 6; }
+    .button-danger { fill: #fee2e2; stroke: #ef4444; stroke-width: 1; rx: 6; ry: 6; }
+    .input { fill: white; stroke: #e5e7eb; stroke-width: 1; rx: 6; ry: 6; }
+    .input-focus { fill: white; stroke: #93c5fd; stroke-width: 2; rx: 6; ry: 6; }
+    .sidebar { fill: white; stroke: #e5e7eb; stroke-width: 1; filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.05)); }
+    .chart { fill: #f8fafc; stroke: #e5e7eb; stroke-width: 1; rx: 8; ry: 8; }
+    .line { stroke: #1e40af; stroke-width: 2.5; fill: none; }
+    .line2 { stroke: #dc2626; stroke-width: 2.5; fill: none; }
+    .line3 { stroke: #15803d; stroke-width: 2.5; fill: none; }
+    .dot { fill: #1e40af; }
+    .divider { stroke: #e5e7eb; stroke-width: 1; }
+    .tab { fill: #f0f4ff; stroke: #e5e7eb; stroke-width: 1; rx: 6 6 0 0; ry: 6 6 0 0; }
+    .tab-active { fill: white; stroke: #e5e7eb; stroke-width: 1; rx: 6 6 0 0; ry: 6 6 0 0; }
+    .positive { fill: #15803d; }
+    .negative { fill: #dc2626; }
+    .news-item { fill: #f8fafc; rx: 4; ry: 4; }
+  </style>
+  
+  <!-- Fundo -->
+  <rect width="1200" height="800" class="bg" />
+  
+  <!-- Cabeçalho -->
+  <rect x="0" y="0" width="1200" height="70" class="header" />
+  <svg x="50" y="20" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 13.2L8.45 19.2L21 4.8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <text x="90" y="45" class="text text-white text-large">Análises Financeiras</text>
+  
+  <!-- Menu Principal -->
+  <text x="780" y="45" class="text text-white text-medium" font-weight="bold">Análise de Mercado</text>
+  <text x="950" y="45" class="text text-white text-medium">Análise de Empresa</text>
+  <text x="1100" y="45" class="text text-white text-medium">Backtesting</text>
+  
+  <!-- Área principal -->
+  <rect x="780" y="70" width="170" height="6" class="bg" fill="#93c5fd" />
+  
+  <!-- Título da página -->
+  <text x="50" y="110" class="section-title">Análise de Mercado</text>
+  
+  <!-- Abas -->
+  <rect x="50" y="130" width="300" height="40" class="tab-active" />
+  <text x="200" y="155" class="text text-medium text-center">📈 Comparação de Índices</text>
+  
+  <rect x="350" y="130" width="300" height="40" class="tab" />
+  <text x="500" y="155" class="text text-medium text-center">🏦 Análise de Setores</text>
+  
+  <rect x="650" y="130" width="300" height="40" class="tab" />
+  <text x="800" y="155" class="text text-medium text-center">🪙 Análise Crypto</text>
+  
+  <!-- Container principal -->
+  <rect x="50" y="169" width="900" height="611" class="border" rx="0 8 8 8" ry="0 8 8 8" />
+  
+  <!-- Campo de busca de ticker -->
+  <text x="80" y="210" class="text text-medium" font-weight="bold">📌 Digite o Ticker do Índice e pressione Enter:</text>
+  <rect x="80" y="225" width="500" height="45" class="input-focus" />
+  <text x="100" y="255" class="text text-small" fill="#9ca3af">Digite o código do índice</text>
+  <text x="530" y="255" class="text text-small text-center">↵</text>
+  
+  <!-- Seleção de período -->
+  <text x="80" y="300" class="text text-medium" font-weight="bold">⏳ Escolha o Período de Análise:</text>
+  <rect x="80" y="315" width="200" height="45" class="input" />
+  <text x="100" y="343" class="text text-small">1y</text>
+  <svg x="250" y="325" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 9l6 6 6-6" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  
+  <!-- Índices selecionados -->
+  <text x="80" y="390" class="text text-medium" font-weight="bold">📌 Índices Selecionados:</text>
+  
+  <!-- Cartões de índices selecionados -->
+  <rect x="80" y="405" width="500" height="50" class="card" />
+  <svg x="100" y="420" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 3v18h18" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 9l-5-5-4 8-4-3" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <text x="130" y="433" class="text text-small"><tspan font-weight="bold">^GSPC</tspan> (S&P 500)</text>
+  <rect x="470" y="415" width="90" height="30" class="button-danger" />
+  <text x="515" y="435" class="text text-small text-center">Remover</text>
+  
+  <rect x="80" y="465" width="500" height="50" class="card" />
+  <svg x="100" y="480" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 3v18h18" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 9l-5-5-4 8-4-3" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <text x="130" y="493" class="text text-small"><tspan font-weight="bold">^BVSP</tspan> (IBOVESPA)</text>
+  <rect x="470" y="475" width="90" height="30" class="button-danger" />
+  <text x="515" y="495" class="text text-small text-center">Remover</text>
+  
+  <rect x="80" y="525" width="500" height="50" class="card" />
+  <svg x="100" y="540" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 3v18h18" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 9l-5-5-4 8-4-3" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <text x="130" y="553" class="text text-small"><tspan font-weight="bold">^IXIC</tspan> (NASDAQ)</text>
+  <rect x="470" y="535" width="90" height="30" class="button-danger" />
+  <text x="515" y="555" class="text text-small text-center">Remover</text>
+  
+  <!-- Gráfico de evolução -->
+  <text x="80" y="605" class="text text-medium" font-weight="bold">📊 Evolução dos Índices:</text>
+  <rect x="80" y="620" width="840" height="300" class="chart" />
+  
+  <!-- Linhas do gráfico -->
+  <polyline points="100,820 150,810 200,815 250,790 300,800 350,780 400,760 450,730 500,740 550,720 600,700 650,710 700,680 750,690 800,670 850,650 900,640" class="line" />
+  <polyline points="100,830 150,840 200,820 250,830 300,810 350,815 400,790 450,795 500,780 550,770 600,750 650,760 700,740 750,720 800,710 850,705 900,690" class="line2" />
+  <polyline points="100,825 150,815 200,825 250,800 300,810 350,790 400,770 450,750 500,760 550,740 600,720 650,730 700,700 750,680 800,660 850,640 900,620" class="line3" />
+  
+  <!-- Legenda do gráfico -->
+  <circle cx="830" cy="640" r="5" fill="#1e40af" />
+  <text x="840" y="645" class="text text-small">S&P 500</text>
+  <circle cx="830" cy="660" r="5" fill="#dc2626" />
+  <text x="840" y="665" class="text text-small">IBOVESPA</text>
+  <circle cx="830" cy="680" r="5" fill="#15803d" />
+  <text x="840" y="685" class="text text-small">NASDAQ</text>
+  
+  <!-- Barra lateral -->
+  <rect x="970" y="130" width="180" height="650" class="sidebar" rx="8" ry="8" />
+  <text x="1060" y="160" class="section-title text-center" font-size="18px">Tendências de Investimento 🌎</text>
+  
+  <!-- Índices em alta -->
+  <text x="1060" y="195" class="text text-small text-center" font-weight="bold">📈 Índices em Alta (Último Mês)</text>
+  
+  <text x="990" y="225" class="text text-small">S&P 500:</text>
+  <text x="1110" y="225" class="text text-small" text-anchor="end" class="positive" fill="#15803d" font-weight="bold">+2.45%</text>
+  
+  <text x="990" y="250" class="text text-small">NASDAQ:</text>
+  <text x="1110" y="250" class="text text-small" text-anchor="end" class="positive" fill="#15803d" font-weight="bold">+1.89%</text>
+  
+  <text x="990" y="275" class="text text-small">IBOVESPA:</text>
+  <text x="1110" y="275" class="text text-small" text-anchor="end" class="positive" fill="#15803d" font-weight="bold">+1.12%</text>
+  
+  <text x="990" y="300" class="text text-small">Dow Jones:</text>
+  <text x="1110" y="300" class="text text-small" text-anchor="end" class="positive" fill="#15803d" font-weight="bold">+0.87%</text>
+  
+  <text x="990" y="325" class="text text-small">FTSE 100:</text>
+  <text x="1110" y="325" class="text text-small" text-anchor="end" class="negative" fill="#dc2626" font-weight="bold">-0.34%</text>
+  
+  <text x="990" y="350" class="text text-small">Nikkei 225:</text>
+  <text x="1110" y="350" class="text text-small" text-anchor="end" class="negative" fill="#dc2626" font-weight="bold">-0.78%</text>
+  
+  <line x1="990" y1="375" x2="1130" y2="375" class="divider" />
+  
+  <!-- Notícias -->
+  <text x="1060" y="405" class="text text-small text-center" font-weight="bold">📰 Últimas Notícias do Mercado</text>
+  
+  <rect x="990" y="420" width="140" height="60" class="news-item" />
+  <text x="1000" y="440" class="text text-small">S&P 500 avança com dados econômicos positivos</text>
+  
+  <rect x="990" y="490" width="140" height="60" class="news-item" />
+  <text x="1000" y="510" class="text text-small">Petróleo sobe com tensões no Oriente Médio</text>
+  
+  <rect x="990" y="560" width="140" height="60" class="news-item" />
+  <text x="1000" y="580" class="text text-small">Fed sinaliza manutenção de juros</text>
+  
+  <!-- Nota de rodapé da barra lateral -->
+  <text x="1060" y="750" class="text text-small text-center" fill="#6b7280">Dados atualizados em: 07/04/2025 às 14:30</text>
+</svg>

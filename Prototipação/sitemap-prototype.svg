@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilos -->
+  <style>
+    .box { stroke: #333; stroke-width: 2; fill: #f5f5f5; rx: 8; ry: 8; }
+    .primary { fill: #4285f4; }
+    .secondary { fill: #f5f5f5; stroke: #4285f4; }
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; text-anchor: middle; }
+    .text-primary { fill: white; }
+    .line { stroke: #999; stroke-width: 2; }
+    .arrow { fill: #999; }
+    .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #333; text-anchor: middle; }
+  </style>
+  
+  <!-- Título -->
+  <text x="400" y="40" class="title">Sitemap e Fluxo de Navegação - Análise Financeira</text>
+  
+  <!-- Página Inicial -->
+  <rect x="320" y="70" width="160" height="60" class="box primary" />
+  <text x="400" y="105" class="text text-primary">Página Inicial</text>
+  
+  <!-- Conexões de primeiro nível -->
+  <line x1="400" y1="130" x2="400" y2="160" class="line" />
+  <line x1="400" y1="160" x2="200" y2="160" class="line" />
+  <line x1="400" y1="160" x2="600" y2="160" class="line" />
+  <line x1="200" y1="160" x2="200" y2="190" class="line" />
+  <line x1="400" y1="160" x2="400" y2="190" class="line" />
+  <line x1="600" y1="160" x2="600" y2="190" class="line" />
+  
+  <!-- Módulos Principais -->
+  <rect x="120" y="190" width="160" height="60" class="box secondary" />
+  <text x="200" y="225" class="text">Análise de Mercado</text>
+  
+  <rect x="320" y="190" width="160" height="60" class="box secondary" />
+  <text x="400" y="225" class="text">Análise de Empresa</text>
+  
+  <rect x="520" y="190" width="160" height="60" class="box secondary" />
+  <text x="600" y="225" class="text">Backtesting</text>
+  
+  <!-- Conexões de segundo nível (Análise de Mercado) -->
+  <line x1="200" y1="250" x2="200" y2="280" class="line" />
+  <line x1="200" y1="280" x2="100" y2="280" class="line" />
+  <line x1="200" y1="280" x2="300" y2="280" class="line" />
+  <line x1="100" y1="280" x2="100" y2="310" class="line" />
+  <line x1="200" y1="280" x2="200" y2="310" class="line" />
+  <line x1="300" y1="280" x2="300" y2="310" class="line" />
+  
+  <!-- Sub-módulos da Análise de Mercado -->
+  <rect x="20" y="310" width="160" height="50" class="box" />
+  <text x="100" y="340" class="text">Comparação de Índices</text>
+  
+  <rect x="120" y="370" width="160" height="50" class="box" />
+  <text x="200" y="400" class="text">Análise de Setores</text>
+  
+  <rect x="220" y="310" width="160" height="50" class="box" />
+  <text x="300" y="340" class="text">Análise de Criptomoedas</text>
+  
+  <!-- Conexões de segundo nível (Análise de Empresa) -->
+  <line x1="400" y1="250" x2="400" y2="280" class="line" />
+  <line x1="400" y1="280" x2="350" y2="280" class="line" />
+  <line x1="400" y1="280" x2="450" y2="280" class="line" />
+  <line x1="350" y1="280" x2="350" y2="310" class="line" />
+  <line x1="400" y1="280" x2="400" y2="310" class="line" />
+  <line x1="450" y1="280" x2="450" y2="310" class="line" />
+  
+  <!-- Sub-módulos da Análise de Empresa -->
+  <rect x="370" y="310" width="160" height="50" class="box" />
+  <text x="450" y="340" class="text">Evolução de Preços</text>
+  
+  <rect x="320" y="370" width="160" height="50" class="box" />
+  <text x="400" y="400" class="text">Dividendos</text>
+  
+  <rect x="420" y="370" width="160" height="50" class="box" />
+  <text x="500" y="400" class="text">Indicadores Técnicos</text>
+  
+  <!-- Conexões de segundo nível (Backtesting) -->
+  <line x1="600" y1="250" x2="600" y2="280" class="line" />
+  <line x1="600" y1="280" x2="550" y2="280" class="line" />
+  <line x1="600" y1="280" x2="650" y2="280" class="line" />
+  <line x1="550" y1="280" x2="550" y2="310" class="line" />
+  <line x1="650" y1="280" x2="650" y2="310" class="line" />
+  
+  <!-- Sub-módulos da Backtesting -->
+  <rect x="520" y="310" width="160" height="50" class="box" />
+  <text x="600" y="340" class="text">Estratégia Médias Móveis</text>
+  
+  <rect x="620" y="370" width="160" height="50" class="box" />
+  <text x="700" y="400" class="text">Estratégia RSI</text>
+  
+  <!-- Legenda -->
+  <rect x="600" y="440" width="20" height="20" class="box primary" />
+  <text x="630" y="455" class="text" style="text-anchor: start;">Página Principal</text>
+  
+  <rect x="600" y="470" width="20" height="20" class="box secondary" />
+  <text x="630" y="485" class="text" style="text-anchor: start;">Módulos Principais</text>
+  
+  <rect x="600" y="500" width="20" height="20" class="box" />
+  <text x="630" y="515" class="text" style="text-anchor: start;">Sub-módulos</text>
+</svg>

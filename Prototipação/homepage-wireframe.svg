@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilos -->
+  <style>
+    .bg { fill: #f8f9fa; }
+    .header { fill: #4285f4; }
+    .text { font-family: Arial, sans-serif; fill: #333; }
+    .text-white { fill: white; }
+    .text-center { text-anchor: middle; }
+    .text-large { font-size: 24px; font-weight: bold; }
+    .text-medium { font-size: 18px; }
+    .text-small { font-size: 14px; }
+    .border { stroke: #dee2e6; stroke-width: 2; fill: white; }
+    .card { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 6; ry: 6; }
+    .button { fill: #4285f4; rx: 4; ry: 4; }
+    .button-secondary { fill: #f8f9fa; stroke: #4285f4; stroke-width: 1; rx: 4; ry: 4; }
+    .sidebar { fill: white; stroke: #dee2e6; stroke-width: 1; }
+    .chart { fill: #f5f5f5; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .line { stroke: #4285f4; stroke-width: 2; fill: none; }
+    .line-trend { stroke: #0f9d58; stroke-width: 2; fill: none; }
+    .dot { fill: #4285f4; }
+  </style>
+  
+  <!-- Fundo -->
+  <rect width="1200" height="800" class="bg" />
+  
+  <!-- Cabeçalho -->
+  <rect x="0" y="0" width="1200" height="70" class="header" />
+  <text x="50" y="45" class="text text-white text-large">Análises Financeiras</text>
+  
+  <!-- Menu Principal -->
+  <text x="950" y="45" class="text text-white text-medium">Análise de Mercado</text>
+  <text x="1100" y="45" class="text text-white text-medium">Análise de Empresa</text>
+  <text x="800" y="45" class="text text-white text-medium">Backtesting</text>
+  
+  <!-- Main Content -->
+  <text x="600" y="120" class="text text-large text-center">Projeto Engenharia de Software</text>
+  <text x="600" y="150" class="text text-medium text-center">Curso de Sistema de Informação - UFPE | 2024.2</text>
+  
+  <!-- Introdução -->
+  <rect x="50" y="180" width="1100" height="120" class="border" rx="4" ry="4" />
+  <text x="70" y="210" class="text text-medium">Este projeto foi desenvolvido por alunos do curso de Sistema de Informação da Universidade Federal de Pernambuco - UFPE, para a cadeira de Engenharia de Software no semestre de 2024.2.</text>
+  <text x="70" y="240" class="text text-medium">É um projeto de autoria de <tspan font-weight="bold">Rafael Mourato</tspan>, <tspan font-weight="bold">Arthur Santos</tspan> e <tspan font-weight="bold">Daniel Dias</tspan>, como forma de aplicar os conhecimentos e solucionar a problemática:</text>
+  <text x="70" y="270" class="text text-medium" font-style="italic">Como posso fazer análises financeiras de maneira independente e intuitiva?</text>
+  
+  <!-- Cards de Contextualização -->
+  <rect x="50" y="330" width="540" height="200" class="card" />
+  <text x="70" y="360" class="text text-medium" font-weight="bold">Contexto</text>
+  <text x="70" y="390" class="text text-small">O mercado financeiro está cada vez mais presente na vida dos brasileiros, com um crescimento de 80% no número de investidores desde 2020, segundo a B3. Pensando em ajudar aqueles que adentram nesse mercado, nossa equipe idealizou um portfólio de informações financeiras para que investidores possam ter visualizações pertinentes na escolha das suas ações e fundos, juntamente com Backtests para análise de evolução de carteira em uma perspectiva passada.</text>
+  
+  <rect x="610" y="330" width="540" height="200" class="card" />
+  <text x="630" y="360" class="text text-medium" font-weight="bold">Objetivos e Funcionalidades</text>
+  <text x="650" y="390" class="text text-small">• Backtests para análise de carteira</text>
+  <text x="650" y="420" class="text text-small">• Simulações financeiras de investimento</text>
+  <text x="650" y="450" class="text text-small">• Análises financeiras em dashboards e indicadores</text>
+  <text x="650" y="480" class="text text-small">• Visualização de dados de forma intuitiva</text>
+  
+  <!-- Issues -->
+  <rect x="50" y="560" width="540" height="200" class="card" />
+  <text x="70" y="590" class="text text-medium" font-weight="bold">Issues Abertas</text>
+  <text x="90" y="620" class="text text-small">1. Iniciar implementação da solução</text>
+  <text x="90" y="650" class="text text-small">2. Seleção de ferramentas para construção</text>
+  
+  <text x="70" y="680" class="text text-medium" font-weight="bold">Issues Concluídas</text>
+  <text x="90" y="710" class="text text-small">1. Preparar entregas iniciais da RFP</text>
+  <text x="90" y="735" class="text text-small">2. Montar os requisitos funcionais e não funcionais</text>
+  
+  <!-- Barra lateral com informações da equipe -->
+  <rect x="610" y="560" width="540" height="200" class="card" />
+  <text x="630" y="590" class="text text-medium" font-weight="bold">Equipe</text>
+  <text x="650" y="620" class="text text-small">• Rafael Mourato (GP/Dev)</text>
+  <text x="650" y="650" class="text text-small">• Arthur Santos (Dev)</text>
+  <text x="650" y="680" class="text text-small">• Daniel Dias (Dev)</text>
+  
+  <text x="630" y="710" class="text text-medium" font-weight="bold">Links Úteis</text>
+  <rect x="650" y="730" width="120" height="30" class="button-secondary" />
+  <text x="710" y="750" class="text text-small text-center">Notion</text>
+  
+  <rect x="780" y="730" width="120" height="30" class="button-secondary" />
+  <text x="840" y="750" class="text text-small text-center">Miro</text>
+  
+  <rect x="910" y="730" width="120" height="30" class="button-secondary" />
+  <text x="970" y="750" class="text text-small text-center">BUILD.md</text>
+</svg>

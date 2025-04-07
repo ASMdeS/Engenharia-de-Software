@@ -1,0 +1,153 @@
+<svg viewBox="0 0 1200 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilos -->
+  <style>
+    .bg { fill: #f8f9fa; }
+    .header { fill: #4285f4; }
+    .text { font-family: Arial, sans-serif; fill: #333; }
+    .text-white { fill: white; }
+    .text-center { text-anchor: middle; }
+    .text-large { font-size: 24px; font-weight: bold; }
+    .text-medium { font-size: 18px; }
+    .text-small { font-size: 14px; }
+    .border { stroke: #dee2e6; stroke-width: 2; fill: white; }
+    .card { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 6; ry: 6; }
+    .button { fill: #4285f4; rx: 4; ry: 4; }
+    .button-secondary { fill: #f8f9fa; stroke: #4285f4; stroke-width: 1; rx: 4; ry: 4; }
+    .input { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .sidebar { fill: white; stroke: #dee2e6; stroke-width: 1; }
+    .chart { fill: #f5f5f5; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .line { stroke: #4285f4; stroke-width: 2; fill: none; }
+    .line2 { stroke: #db4437; stroke-width: 2; fill: none; }
+    .line3 { stroke: #0f9d58; stroke-width: 2; fill: none; }
+    .buy { fill: #0f9d58; }
+    .sell { fill: #db4437; }
+    .metric-card { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .table { fill: white; stroke: #dee2e6; stroke-width: 1; }
+    .table-header { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 1; }
+    .table-row { fill: white; stroke: #dee2e6; stroke-width: 1; }
+    .table-row-alt { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 1; }
+  </style>
+  
+  <!-- Fundo -->
+  <rect width="1200" height="1000" class="bg" />
+  
+  <!-- Cabeçalho -->
+  <rect x="0" y="0" width="1200" height="70" class="header" />
+  <text x="50" y="45" class="text text-white text-large">Análises Financeiras</text>
+  
+  <!-- Menu Principal -->
+  <text x="800" y="45" class="text text-white text-medium">Análise de Mercado</text>
+  <text x="950" y="45" class="text text-white text-medium">Análise de Empresa</text>
+  <text x="1100" y="45" class="text text-white text-medium" font-weight="bold">Backtesting</text>
+  
+  <!-- Título da Página -->
+  <text x="50" y="110" class="text text-large">Ferramenta de Backtesting de Ações</text>
+  <text x="50" y="140" class="text text-small">Simulando e analisando estratégias de trade com base em dados históricos de ações</text>
+  
+  <!-- Container principal -->
+  <rect x="50" y="160" width="850" height="830" class="border" rx="4" ry="4" />
+  
+  <!-- Input do Ticker -->
+  <text x="80" y="200" class="text text-medium">Digite o Ticker:</text>
+  <rect x="210" y="180" width="200" height="40" class="input" />
+  <text x="240" y="205" class="text text-small">AAPL</text>
+  
+  <!-- Seleção de Período -->
+  <text x="80" y="260" class="text text-medium">Selecione o período de tempo para backtest:</text>
+  <rect x="80" y="280" width="790" height="40" class="input" />
+  <text x="100" y="305" class="text text-small">2022-01-01 — 2025-03-31</text>
+  
+  <!-- Gráfico de Preços e Sinais -->
+  <text x="80" y="350" class="text text-medium" font-weight="bold">Resultados do Backtesting para AAPL</text>
+  <rect x="80" y="370" width="790" height="250" class="chart" />
+  
+  <!-- Linhas de gráfico para preço e médias móveis -->
+  <polyline points="100,520 150,510 200,500 250,520 300,530 350,510 400,490 450,470 500,480 550,450 600,430 650,450 700,420 750,400 800,390 850,370" class="line" />
+  <polyline points="100,530 150,520 200,515 250,525 300,535 350,520 400,505 450,490 500,495 550,475 600,455 650,470 700,440 750,425 800,415 850,395" class="line2" />
+  <polyline points="100,540 150,535 200,530 250,535 300,545 350,535 400,525 450,515 500,520 550,505 600,485 650,500 700,470 750,455 800,445 850,425" class="line3" />
+  
+  <!-- Pontos de compra e venda -->
+  <circle cx="300" cy="530" r="6" class="buy" />
+  <circle cx="450" cy="470" r="6" class="sell" />
+  <circle cx="550" cy="450" r="6" class="buy" />
+  <circle cx="700" cy="420" r="6" class="sell" />
+  <circle cx="800" cy="390" r="6" class="buy" />
+  
+  <!-- Gráfico de Curva de Patrimônio -->
+  <rect x="80" y="640" width="790" height="180" class="chart" />
+  <polyline points="100,780 150,775 200,770 250,760 300,750 350,760 400,740 450,750 500,730 550,720 600,710 650,700 700,680 750,670 800,650 850,630" class="line" />
+  <polyline points="100,780 150,782 200,775 250,778 300,770 350,765 400,760 450,750 500,745 550,740 600,730 650,725 700,715 750,705 800,695 850,680" class="line2" />
+  
+  <!-- Legenda -->
+  <text x="110" y="610" class="text text-small">— Preço de Fechamento</text>
+  <text x="270" y="610" class="text text-small">— MM de 10 dias</text>
+  <text x="400" y="610" class="text text-small">— MM de 30 dias</text>
+  <circle cx="520" cy="607" r="6" class="buy" />
+  <text x="535" y="610" class="text text-small">Compra</text>
+  <circle cx="590" cy="607" r="6" class="sell" />
+  <text x="605" y="610" class="text text-small">Venda</text>
+  
+  <text x="110" y="830" class="text text-small">— Estratégia</text>
+  <text x="210" y="830" class="text text-small">— Comprar e Segurar</text>
+  
+  <!-- Sidebar com Parâmetros -->
+  <rect x="920" y="160" width="230" height="400" class="sidebar" rx="4" ry="4" />
+  <text x="1035" y="190" class="text text-medium text-center" font-weight="bold">Parâmetros da Estratégia</text>
+  
+  <text x="940" y="230" class="text text-small">Selecione a Estratégia:</text>
+  <rect x="940" y="240" width="190" height="40" class="input" />
+  <text x="960" y="265" class="text text-small">Moving Average Crossover</text>
+  <text x="1110" y="265" class="text text-small">▼</text>
+  
+  <text x="940" y="300" class="text text-small">Janela da Média Móvel Curta:</text>
+  <rect x="940" y="310" width="190" height="40" class="input" />
+  <text x="960" y="335" class="text text-small">10</text>
+  
+  <text x="940" y="370" class="text text-small">Janela da Média Móvel Longa:</text>
+  <rect x="940" y="380" width="190" height="40" class="input" />
+  <text x="960" y="405" class="text text-small">30</text>
+  
+  <!-- Métricas de Desempenho -->
+  <rect x="920" y="580" width="230" height="410" class="sidebar" rx="4" ry="4" />
+  <text x="1035" y="610" class="text text-medium text-center" font-weight="bold">Métricas de Desempenho</text>
+  
+  <!-- Cards de Métricas -->
+  <rect x="940" y="630" width="190" height="60" class="metric-card" />
+  <text x="950" y="650" class="text text-small">Retorno Total (Estratégia)</text>
+  <text x="950" y="675" class="text text-medium" fill="#0f9d58" font-weight="bold">+32.45%</text>
+  
+  <rect x="940" y="700" width="190" height="60" class="metric-card" />
+  <text x="950" y="720" class="text text-small">Retorno Anualizado (Estratégia)</text>
+  <text x="950" y="745" class="text text-medium" fill="#0f9d58" font-weight="bold">+12.86%</text>
+  
+  <rect x="940" y="770" width="190" height="60" class="metric-card" />
+  <text x="950" y="790" class="text text-small">Drawdown Máximo</text>
+  <text x="950" y="815" class="text text-medium" fill="#db4437" font-weight="bold">-8.42%</text>
+  
+  <rect x="940" y="840" width="190" height="60" class="metric-card" />
+  <text x="950" y="860" class="text text-small">Índice Sharpe</text>
+  <text x="950" y="885" class="text text-medium" font-weight="bold">1.45</text>
+  
+  <rect x="940" y="910" width="190" height="60" class="metric-card" />
+  <text x="950" y="930" class="text text-small">Número de Operações</text>
+  <text x="950" y="955" class="text text-medium" font-weight="bold">24</text>
+  
+  <!-- Operações Recentes -->
+  <text x="80" y="860" class="text text-medium" font-weight="bold">Operações Recentes</text>
+  
+  <!-- Tabela de Operações -->
+  <rect x="80" y="880" width="790" height="40" class="table-header" />
+  <text x="150" y="905" class="text text-small" font-weight="bold">Data</text>
+  <text x="350" y="905" class="text text-small" font-weight="bold">Ação</text>
+  <text x="550" y="905" class="text text-small" font-weight="bold">Preço</text>
+  
+  <rect x="80" y="920" width="790" height="35" class="table-row" />
+  <text x="150" y="942" class="text text-small">2025-03-15</text>
+  <text x="350" y="942" class="text text-small">Compra</text>
+  <text x="550" y="942" class="text text-small">$190.25</text>
+  
+  <rect x="80" y="955" width="790" height="35" class="table-row-alt" />
+  <text x="150" y="977" class="text text-small">2025-02-28</text>
+  <text x="350" y="977" class="text text-small">Venda</text>
+  <text x="550" y="977" class="text text-small">$187.50</text>
+</svg>

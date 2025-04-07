@@ -1,0 +1,114 @@
+<svg viewBox="0 0 1200 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilos -->
+  <style>
+    .bg { fill: #f8f9fa; }
+    .header { fill: #4285f4; }
+    .text { font-family: Arial, sans-serif; fill: #333; }
+    .text-white { fill: white; }
+    .text-center { text-anchor: middle; }
+    .text-large { font-size: 24px; font-weight: bold; }
+    .text-medium { font-size: 18px; }
+    .text-small { font-size: 14px; }
+    .border { stroke: #dee2e6; stroke-width: 2; fill: white; }
+    .card { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 6; ry: 6; }
+    .button { fill: #4285f4; rx: 4; ry: 4; }
+    .button-secondary { fill: #f8f9fa; stroke: #4285f4; stroke-width: 1; rx: 4; ry: 4; }
+    .input { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .sidebar { fill: white; stroke: #dee2e6; stroke-width: 1; }
+    .chart { fill: #f5f5f5; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .line { stroke: #4285f4; stroke-width: 2; fill: none; }
+    .line2 { stroke: #db4437; stroke-width: 2; fill: none; }
+    .line3 { stroke: #0f9d58; stroke-width: 2; fill: none; }
+    .dot { fill: #4285f4; }
+    .tab { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .tab-active { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .summary { fill: rgba(50, 50, 50, 0.9); rx: 4; ry: 4; }
+    .table { fill: white; stroke: #dee2e6; stroke-width: 1; }
+    .table-header { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 1; }
+    .bar { fill: #4285f4; }
+    .up { fill: #0f9d58; }
+    .down { fill: #db4437; }
+    .divider { stroke: #dee2e6; stroke-width: 1; }
+  </style>
+  
+  <!-- Fundo -->
+  <rect width="1200" height="1000" class="bg" />
+  
+  <!-- Cabeçalho -->
+  <rect x="0" y="0" width="1200" height="70" class="header" />
+  <text x="50" y="45" class="text text-white text-large">Análises Financeiras</text>
+  
+  <!-- Menu Principal -->
+  <text x="800" y="45" class="text text-white text-medium">Análise de Mercado</text>
+  <text x="950" y="45" class="text text-white text-medium" font-weight="bold">Análise de Empresa</text>
+  <text x="1100" y="45" class="text text-white text-medium">Backtesting</text>
+  
+  <!-- Título da Página -->
+  <text x="50" y="110" class="text text-large">Análise de Ticker Financeiro</text>
+  
+  <!-- Input do Ticker -->
+  <text x="50" y="150" class="text text-medium">Digite o Ticker:</text>
+  <rect x="180" y="130" width="200" height="40" class="input" />
+  <text x="210" y="155" class="text text-small">AAPL</text>
+  
+  <!-- Informações da Empresa -->
+  <rect x="50" y="180" width="1100" height="150" class="border" rx="4" ry="4" />
+  
+  <!-- Colunas de Informações -->
+  <text x="70" y="210" class="text text-medium" font-weight="bold">Empresa: Apple Inc.</text>
+  <text x="470" y="210" class="text text-medium" font-weight="bold">Mercado: Technology</text>
+  <text x="870" y="210" class="text text-medium" font-weight="bold">Preço atual: $182.52 USD</text>
+  
+  <!-- Descrição da Empresa - Caixa de Texto Cinza -->
+  <rect x="70" y="230" width="1060" height="80" class="summary" />
+  <text x="90" y="260" class="text text-small text-white">Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories...</text>
+  
+  <!-- Abas de Navegação -->
+  <text x="50" y="360" class="text text-large">Métricas do Ticker AAPL</text>
+  <line x1="50" y1="380" x2="1150" y2="380" class="divider" />
+  
+  <rect x="50" y="390" width="220" height="40" class="tab-active" />
+  <text x="160" y="415" class="text text-medium text-center">Evolução de preços</text>
+  
+  <rect x="270" y="390" width="220" height="40" class="tab" />
+  <text x="380" y="415" class="text text-medium text-center">Dividendos</text>
+  
+  <rect x="490" y="390" width="220" height="40" class="tab" />
+  <text x="600" y="415" class="text text-medium text-center">Informações Gerais</text>
+  
+  <rect x="710" y="390" width="220" height="40" class="tab" />
+  <text x="820" y="415" class="text text-medium text-center">Indicadores Técnicos</text>
+  
+  <rect x="930" y="390" width="220" height="40" class="tab" />
+  <text x="1040" y="415" class="text text-medium text-center">FAQ</text>
+  
+  <!-- Conteúdo da Aba 1: Evolução de Preços -->
+  <text x="70" y="460" class="text text-medium" font-weight="bold">Gráfico de evolução</text>
+  <rect x="70" y="480" width="1060" height="40" class="input" />
+  <text x="90" y="505" class="text text-small">📈 Evolução da ação ao longo dos anos: 2020-01-01 — 2025-03-31</text>
+  
+  <!-- Gráfico de Evolução de Preços -->
+  <rect x="70" y="530" width="1060" height="300" class="chart" />
+  <polyline points="90,730 140,720 190,680 240,690 290,650 340,670 390,640 440,600 490,580 540,620 590,590 640,620 690,580 740,550 790,530 840,560 890,520 940,540 990,580 1040,550 1090,530" class="line" />
+  
+  <!-- Data de início -->
+  <text x="70" y="860" class="text text-medium" font-weight="bold">Analise de evolução escolhendo o inicio</text>
+  <text x="70" y="890" class="text text-small">Data de inicio:</text>
+  <rect x="180" y="870" width="200" height="40" class="input" />
+  <text x="210" y="895" class="text text-small">2025-01-01</text>
+  
+  <!-- Tabela de Resultados -->
+  <rect x="70" y="920" width="1060" height="300" class="table" />
+  <rect x="70" y="920" width="1060" height="40" class="table-header" />
+  <text x="100" y="945" class="text text-small" font-weight="bold">Date</text>
+  <text x="250" y="945" class="text text-small" font-weight="bold">Open</text>
+  <text x="400" y="945" class="text text-small" font-weight="bold">High</text>
+  <text x="550" y="945" class="text text-small" font-weight="bold">Low</text>
+  <text x="700" y="945" class="text text-small" font-weight="bold">Close</text>
+  <text x="850" y="945" class="text text-small" font-weight="bold">Volume</text>
+  <text x="1000" y="945" class="text text-small" font-weight="bold">Adj Close</text>
+  
+  <!-- Download Button -->
+  <rect x="70" y="1230" width="200" height="40" class="button" />
+  <text x="170" y="1255" class="text text-small text-center text-white">Download CSV</text>
+</svg>

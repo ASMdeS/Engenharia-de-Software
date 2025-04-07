@@ -1,0 +1,108 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilos -->
+  <style>
+    .bg { fill: #f8f9fa; }
+    .device-frame { fill: #ffffff; stroke: #333; stroke-width: 2; rx: 8; ry: 8; }
+    .device-screen { fill: #ffffff; }
+    .laptop-keyboard { fill: #e5e7eb; stroke: #d1d5db; stroke-width: 1; }
+    .phone-frame { fill: #333333; rx: 20; ry: 20; }
+    .phone-screen { fill: #ffffff; rx: 12; ry: 12; }
+    .tablet-frame { fill: #333333; rx: 12; ry: 12; }
+    .tablet-screen { fill: #ffffff; rx: 8; ry: 8; }
+    .phone-button { fill: #555; rx: 50%; ry: 50%; }
+    .text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; fill: #333; }
+    .text-center { text-anchor: middle; }
+    .text-title { font-size: 24px; font-weight: bold; }
+    .text-subtitle { font-size: 18px; }
+    .text-small { font-size: 14px; }
+    .text-mini { font-size: 10px; }
+    .header { fill: #1e40af; }
+    .card { fill: white; stroke: #e5e7eb; stroke-width: 1; rx: 6; ry: 6; filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1)); }
+    .chart { fill: #f0f4ff; stroke: #e5e7eb; stroke-width: 1; rx: 4; ry: 4; }
+    .line { stroke: #1e40af; stroke-width: 1.5; fill: none; }
+    .button { fill: #1e40af; rx: 4; ry: 4; }
+  </style>
+  
+  <!-- Fundo -->
+  <rect width="1200" height="800" class="bg" />
+  
+  <!-- Título da Página -->
+  <text x="600" y="60" class="text text-title text-center">Visualização Responsiva em Múltiplos Dispositivos</text>
+  <text x="600" y="90" class="text text-subtitle text-center">Plataforma de Análises Financeiras</text>
+  
+  <!-- Laptop -->
+  <rect x="260" y="150" width="680" height="400" class="device-frame" />
+  <rect x="278" y="168" width="644" height="345" class="device-screen" />
+  <rect x="260" y="550" width="680" height="30" class="laptop-keyboard" rx="3" ry="3" />
+  
+  <!-- Conteúdo do Laptop -->
+  <rect x="278" y="168" width="644" height="70" class="header" />
+  <text x="310" y="210" class="text text-small text-white">Análises Financeiras</text>
+  <text x="800" y="210" class="text text-mini text-white">Análise de Mercado</text>
+  <text x="700" y="210" class="text text-mini text-white">Backtesting</text>
+  
+  <text x="300" y="260" class="text text-small" font-weight="bold">Análise de Ticker Financeiro</text>
+  
+  <rect x="300" y="280" width="600" height="40" class="card" />
+  <text x="320" y="305" class="text text-mini">AAPL - Apple Inc. - Technology - $182.52 USD</text>
+  
+  <!-- Gráfico no Laptop -->
+  <rect x="300" y="330" width="600" height="150" class="chart" />
+  <polyline points="310,450 340,440 370,445 400,430 430,435 460,425 490,420 520,410 550,415 580,405 610,395 640,400 670,390 700,385 730,375 760,380 790,365 820,370 850,380 880,370" class="line" />
+  
+  <!-- Smartphone -->
+  <rect x="50" y="220" width="160" height="320" class="phone-frame" />
+  <rect x="58" y="240" width="144" height="270" class="phone-screen" />
+  <circle cx="130" cy="525" r="15" class="phone-button" />
+  
+  <!-- Conteúdo do Smartphone -->
+  <rect x="58" y="240" width="144" height="35" class="header" />
+  <text x="70" y="263" class="text text-mini text-white">Análises Financeiras</text>
+  
+  <text x="70" y="285" class="text text-mini" font-weight="bold">Ticker: AAPL</text>
+  
+  <!-- Versão Mobile do Gráfico -->
+  <rect x="65" y="300" width="130" height="80" class="chart" />
+  <polyline points="70,365 80,360 90,362 100,355 110,357 120,352 130,347 140,350 150,345 160,340 170,342 180,335" class="line" />
+  
+  <rect x="65" y="390" width="130" height="50" class="card" />
+  <text x="75" y="410" class="text text-mini">Apple Inc.</text>
+  <text x="75" y="425" class="text text-mini">$182.52 USD</text>
+  
+  <rect x="85" y="450" width="90" height="25" class="button" />
+  <text x="130" y="467" class="text text-mini text-white text-center">Analisar</text>
+  
+  <!-- Tablet -->
+  <rect x="1000" y="250" width="180" height="240" class="tablet-frame" />
+  <rect x="1008" y="260" width="164" height="220" class="tablet-screen" />
+  
+  <!-- Conteúdo do Tablet -->
+  <rect x="1008" y="260" width="164" height="40" class="header" />
+  <text x="1020" y="285" class="text text-mini text-white">Análises Financeiras</text>
+  
+  <text x="1020" y="310" class="text text-mini" font-weight="bold">Backtesting</text>
+  
+  <rect x="1015" y="325" width="150" height="70" class="chart" />
+  <polyline points="1020,380 1030,375 1040,377 1050,370 1060,372 1070,365 1080,360 1090,362 1100,355 1110,350 1120,352 1130,345 1140,340 1150,343" class="line" />
+  
+  <rect x="1015" y="405" width="70" height="60" class="card" />
+  <text x="1025" y="425" class="text text-mini">Retorno</text>
+  <text x="1025" y="445" class="text text-mini" fill="#15803d" font-weight="bold">+12.5%</text>
+  
+  <rect x="1095" y="405" width="70" height="60" class="card" />
+  <text x="1105" y="425" class="text text-mini">Sharpe</text>
+  <text x="1105" y="445" class="text text-mini" font-weight="bold">1.45</text>
+
+  <!-- Descrições -->
+  <text x="600" y="620" class="text text-small text-center" font-weight="bold">Desktop / Laptop</text>
+  <text x="600" y="645" class="text text-small text-center">Visualização completa com múltiplos painéis e dados detalhados</text>
+  
+  <text x="130" y="620" class="text text-small text-center" font-weight="bold">Smartphone</text>
+  <text x="130" y="645" class="text text-small text-center">Interface simplificada com foco em dados essenciais</text>
+  
+  <text x="1090" y="620" class="text text-small text-center" font-weight="bold">Tablet</text>
+  <text x="1090" y="645" class="text text-small text-center">Versão intermediária que prioriza visualizações importantes</text>
+  
+  <text x="600" y="700" class="text text-small text-center">A plataforma de análises financeiras é otimizada para oferecer uma experiência consistente em todos os dispositivos,</text>
+  <text x="600" y="725" class="text text-small text-center">mantendo as funcionalidades principais acessíveis e adaptando a densidade de informação ao tamanho da tela.</text>
+</svg>

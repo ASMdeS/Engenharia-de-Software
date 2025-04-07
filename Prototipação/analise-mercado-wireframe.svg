@@ -1,0 +1,132 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilos -->
+  <style>
+    .bg { fill: #f8f9fa; }
+    .header { fill: #4285f4; }
+    .active-tab { fill: #fff; stroke: #dee2e6; stroke-width: 1; }
+    .inactive-tab { fill: #e9ecef; stroke: #dee2e6; stroke-width: 1; }
+    .text { font-family: Arial, sans-serif; fill: #333; }
+    .text-white { fill: white; }
+    .text-center { text-anchor: middle; }
+    .text-large { font-size: 24px; font-weight: bold; }
+    .text-medium { font-size: 18px; }
+    .text-small { font-size: 14px; }
+    .border { stroke: #dee2e6; stroke-width: 2; fill: white; }
+    .card { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 6; ry: 6; }
+    .button { fill: #4285f4; rx: 4; ry: 4; }
+    .button-secondary { fill: #f8f9fa; stroke: #4285f4; stroke-width: 1; rx: 4; ry: 4; }
+    .input { fill: white; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .sidebar { fill: white; stroke: #dee2e6; stroke-width: 1; }
+    .chart { fill: #f5f5f5; stroke: #dee2e6; stroke-width: 1; rx: 4; ry: 4; }
+    .line { stroke: #4285f4; stroke-width: 2; fill: none; }
+    .line2 { stroke: #db4437; stroke-width: 2; fill: none; }
+    .line3 { stroke: #0f9d58; stroke-width: 2; fill: none; }
+    .dot { fill: #4285f4; }
+    .heatmap { fill: url(#heatmap-gradient); stroke: #dee2e6; stroke-width: 1; }
+    .crypto-row { fill: #fff; stroke: #dee2e6; stroke-width: 1; }
+    .crypto-row-alt { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 1; }
+  </style>
+  
+  <!-- Gradientes -->
+  <defs>
+    <linearGradient id="heatmap-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B22222" />
+      <stop offset="50%" stop-color="#333333" />
+      <stop offset="100%" stop-color="#008000" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fundo -->
+  <rect width="1200" height="800" class="bg" />
+  
+  <!-- Cabeçalho -->
+  <rect x="0" y="0" width="1200" height="70" class="header" />
+  <text x="50" y="45" class="text text-white text-large">Análises Financeiras</text>
+  
+  <!-- Menu Principal -->
+  <text x="950" y="45" class="text text-white text-medium" font-weight="bold">Análise de Mercado</text>
+  <text x="1100" y="45" class="text text-white text-medium">Análise de Empresa</text>
+  <text x="800" y="45" class="text text-white text-medium">Backtesting</text>
+  
+  <!-- Título da Página -->
+  <text x="50" y="110" class="text text-large">Análise de Mercado</text>
+  
+  <!-- Abas -->
+  <rect x="50" y="130" width="350" height="40" class="active-tab" rx="4" ry="4" />
+  <text x="225" y="155" class="text text-medium text-center">📈 Comparação de Índices</text>
+  
+  <rect x="400" y="130" width="350" height="40" class="inactive-tab" rx="4" ry="4" />
+  <text x="575" y="155" class="text text-medium text-center">🏦 Análise de Setores</text>
+  
+  <rect x="750" y="130" width="350" height="40" class="inactive-tab" rx="4" ry="4" />
+  <text x="925" y="155" class="text text-medium text-center">🪙 Análise Crypto</text>
+  
+  <!-- Conteúdo Principal -->
+  <rect x="50" y="180" width="900" height="600" class="border" rx="4" ry="4" />
+  
+  <!-- Área de Input do Ticker -->
+  <text x="70" y="220" class="text text-medium" font-weight="bold">📌 Digite o Ticker do Índice e pressione Enter:</text>
+  <rect x="70" y="240" width="500" height="40" class="input" />
+  <text x="90" y="265" class="text text-small" fill="#777">Digite o código do índice</text>
+  
+  <!-- Seleção de Período -->
+  <text x="70" y="320" class="text text-medium" font-weight="bold">⏳ Escolha o Período de Análise:</text>
+  <rect x="70" y="340" width="200" height="40" class="input" />
+  <text x="90" y="365" class="text text-small">1y</text>
+  <text x="250" y="365" class="text text-small">▼</text>
+  
+  <!-- Índices Selecionados -->
+  <text x="70" y="420" class="text text-medium" font-weight="bold">📌 Índices Selecionados:</text>
+  
+  <rect x="70" y="440" width="500" height="40" class="card" />
+  <text x="90" y="465" class="text text-small">📈 ^GSPC (S&P 500)</text>
+  <rect x="480" y="445" width="80" height="30" class="button-secondary" />
+  <text x="520" y="465" class="text text-small text-center">Remover</text>
+  
+  <rect x="70" y="490" width="500" height="40" class="card" />
+  <text x="90" y="515" class="text text-small">📈 ^BVSP (IBOVESPA)</text>
+  <rect x="480" y="495" width="80" height="30" class="button-secondary" />
+  <text x="520" y="515" class="text text-small text-center">Remover</text>
+  
+  <rect x="70" y="540" width="500" height="40" class="card" />
+  <text x="90" y="565" class="text text-small">📈 ^IXIC (NASDAQ)</text>
+  <rect x="480" y="545" width="80" height="30" class="button-secondary" />
+  <text x="520" y="565" class="text text-small text-center">Remover</text>
+  
+  <!-- Gráfico de Evolução -->
+  <text x="70" y="620" class="text text-medium" font-weight="bold">📊 Evolução dos Índices:</text>
+  <rect x="70" y="640" width="850" height="300" class="chart" />
+  
+  <!-- Linhas dos gráficos -->
+  <polyline points="90,840 120,820 170,830 220,780 270,810 320,790 370,740 420,720 470,730 520,710 570,680 620,670 670,690 720,640 770,650 820,630 870,600" class="line" />
+  <polyline points="90,870 120,860 170,880 220,850 270,870 320,830 370,850 420,830 470,810 520,790 570,800 620,770 670,760 720,750 770,720 820,700 870,710" class="line2" />
+  <polyline points="90,830 120,840 170,850 220,820 270,840 320,810 370,780 420,800 470,760 520,740 570,730 620,710 670,680 720,700 770,670 820,650 870,620" class="line3" />
+  
+  <!-- Legenda do gráfico -->
+  <circle cx="90" cy="940" r="5" class="dot" fill="#4285f4" />
+  <text x="110" y="945" class="text text-small">S&P 500</text>
+  
+  <circle cx="190" cy="940" r="5" class="dot" fill="#db4437" />
+  <text x="210" y="945" class="text text-small">IBOVESPA</text>
+  
+  <circle cx="290" cy="940" r="5" class="dot" fill="#0f9d58" />
+  <text x="310" y="945" class="text text-small">NASDAQ</text>
+  
+  <!-- Barra lateral com tendências -->
+  <rect x="970" y="180" width="180" height="600" class="sidebar" rx="4" ry="4" />
+  <text x="1060" y="210" class="text text-medium text-center" font-weight="bold">Tendências de Investimento 🌎</text>
+  <text x="1060" y="240" class="text text-small text-center" font-weight="bold">📈 Índices em Alta (Último Mês)</text>
+  
+  <text x="990" y="270" class="text text-small">S&P 500: <tspan font-weight="bold" fill="#0f9d58">+2.45%</tspan></text>
+  <text x="990" y="300" class="text text-small">NASDAQ: <tspan font-weight="bold" fill="#0f9d58">+1.89%</tspan></text>
+  <text x="990" y="330" class="text text-small">IBOVESPA: <tspan font-weight="bold" fill="#0f9d58">+1.12%</tspan></text>
+  <text x="990" y="360" class="text text-small">Dow Jones: <tspan font-weight="bold" fill="#0f9d58">+0.87%</tspan></text>
+  <text x="990" y="390" class="text text-small">FTSE 100: <tspan font-weight="bold" fill="#db4437">-0.34%</tspan></text>
+  <text x="990" y="420" class="text text-small">Nikkei 225: <tspan font-weight="bold" fill="#db4437">-0.78%</tspan></text>
+  
+  <text x="1060" y="470" class="text text-small text-center" font-weight="bold">📰 Últimas Notícias do Mercado</text>
+  
+  <text x="990" y="510" class="text text-small">S&P 500 avança com dados econômicos positivos</text>
+  <text x="990" y="550" class="text text-small">Petróleo sobe com tensões no Oriente Médio</text>
+  <text x="990" y="590" class="text text-small">Fed sinaliza manutenção de juros</text>
+</svg>

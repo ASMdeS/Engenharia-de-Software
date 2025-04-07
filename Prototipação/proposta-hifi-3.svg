@@ -1,0 +1,145 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilos -->
+  <style>
+    .bg { fill: #ffffff; }
+    .header { fill: #1e40af; } /* Azul escuro */
+    .text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; fill: #333; }
+    .text-white { fill: white; }
+    .text-center { text-anchor: middle; }
+    .text-large { font-size: 24px; font-weight: bold; }
+    .text-medium { font-size: 18px; }
+    .text-small { font-size: 14px; }
+    .section-title { font-size: 22px; font-weight: bold; fill: #1e40af; }
+    .border { stroke: #e5e7eb; stroke-width: 2; fill: white; }
+    .card { fill: white; stroke: #e5e7eb; stroke-width: 1; rx: 8; ry: 8; filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); }
+    .button { fill: #1e40af; rx: 6; ry: 6; filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1)); }
+    .button-secondary { fill: #f0f4ff; stroke: #1e40af; stroke-width: 1; rx: 6; ry: 6; }
+    .input { fill: white; stroke: #e5e7eb; stroke-width: 1; rx: 6; ry: 6; }
+    .input-focus { fill: white; stroke: #93c5fd; stroke-width: 2; rx: 6; ry: 6; }
+    .summary { fill: rgba(31, 41, 55, 0.9); rx: 6; ry: 6; }
+    .chart { fill: #f8fafc; stroke: #e5e7eb; stroke-width: 1; rx: 8; ry: 8; }
+    .chart-secondary { fill: #f9fafb; stroke: #e5e7eb; stroke-width: 1; rx: 8; ry: 8; }
+    .line { stroke: #1e40af; stroke-width: 2.5; fill: none; }
+    .line2 { stroke: #dc2626; stroke-width: 2.5; fill: none; }
+    .line3 { stroke: #15803d; stroke-width: 2.5; fill: none; }
+    .divider { stroke: #e5e7eb; stroke-width: 1; }
+    .tab { fill: #f0f4ff; stroke: #e5e7eb; stroke-width: 1; rx: 6 6 0 0; ry: 6 6 0 0; }
+    .tab-active { fill: white; stroke: #e5e7eb; stroke-width: 1; rx: 6 6 0 0; ry: 6 6 0 0; }
+    .tab-content { fill: white; stroke: #e5e7eb; stroke-width: 1; rx: 0 6 6 6; ry: 0 6 6 6; }
+    .positive { fill: #15803d; }
+    .negative { fill: #dc2626; }
+    .table { fill: white; }
+    .table-header { fill: #f9fafb; stroke: #e5e7eb; stroke-width: 1; }
+    .table-row { fill: white; stroke: #e5e7eb; stroke-width: 1; }
+    .table-row-alt { fill: #f9fafb; stroke: #e5e7eb; stroke-width: 1; }
+  </style>
+  
+  <!-- Fundo -->
+  <rect width="1200" height="900" class="bg" />
+  
+  <!-- Cabeçalho -->
+  <rect x="0" y="0" width="1200" height="70" class="header" />
+  <svg x="50" y="20" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 13.2L8.45 19.2L21 4.8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <text x="90" y="45" class="text text-white text-large">Análises Financeiras</text>
+  
+  <!-- Menu Principal -->
+  <text x="780" y="45" class="text text-white text-medium">Análise de Mercado</text>
+  <text x="950" y="45" class="text text-white text-medium" font-weight="bold">Análise de Empresa</text>
+  <text x="1100" y="45" class="text text-white text-medium">Backtesting</text>
+  
+  <!-- Área principal -->
+  <rect x="950" y="70" width="150" height="6" class="bg" fill="#93c5fd" />
+  
+  <!-- Título da página -->
+  <text x="50" y="110" class="section-title">Análise de Ticker Financeiro</text>
+  
+  <!-- Campo de busca de ticker -->
+  <text x="50" y="150" class="text text-medium" font-weight="bold">Digite o Ticker:</text>
+  <rect x="180" y="130" width="200" height="40" class="input-focus" />
+  <text x="210" y="155" class="text text-medium">AAPL</text>
+  
+  <!-- Painel de informações da empresa -->
+  <rect x="50" y="180" width="1100" height="160" class="card" />
+  
+  <!-- Informações em colunas -->
+  <text x="70" y="210" class="text text-medium" font-weight="bold">Empresa: Apple Inc.</text>
+  <text x="470" y="210" class="text text-medium" font-weight="bold">Mercado: Technology</text>
+  <text x="870" y="210" class="text text-medium" font-weight="bold">Preço atual: $182.52 USD</text>
+  
+  <!-- Descrição da empresa -->
+  <rect x="70" y="230" width="1060" height="90" class="summary" />
+  <text x="90" y="255" class="text text-small text-white">Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple TV, Apple Watch, Beats products, and HomePod.</text>
+  <text x="90" y="285" class="text text-small text-white">The company also provides AppleCare support and cloud services. The company serves consumers, small and mid-sized businesses, education, enterprise, and government customers.</text>
+  
+  <!-- Métricas e abas -->
+  <text x="50" y="370" class="section-title">Métricas do Ticker AAPL</text>
+  <line x1="50" y1="385" x2="1150" y2="385" class="divider" />
+  
+  <!-- Abas de navegação -->
+  <rect x="50" y="395" width="220" height="40" class="tab-active" />
+  <text x="160" y="420" class="text text-medium text-center">Evolução de preços</text>
+  
+  <rect x="270" y="395" width="220" height="40" class="tab" />
+  <text x="380" y="420" class="text text-medium text-center">Dividendos</text>
+  
+  <rect x="490" y="395" width="220" height="40" class="tab" />
+  <text x="600" y="420" class="text text-medium text-center">Informações Gerais</text>
+  
+  <rect x="710" y="395" width="220" height="40" class="tab" />
+  <text x="820" y="420" class="text text-medium text-center">Indicadores Técnicos</text>
+  
+  <rect x="930" y="395" width="220" height="40" class="tab" />
+  <text x="1040" y="420" class="text text-medium text-center">FAQ</text>
+  
+  <!-- Conteúdo da aba -->
+  <rect x="50" y="434" width="1100" height="446" class="tab-content" />
+  
+  <!-- Evolução de preços -->
+  <text x="70" y="470" class="text text-medium" font-weight="bold">Gráfico de evolução</text>
+  
+  <!-- Slider de período -->
+  <rect x="70" y="485" width="1060" height="10" class="chart-secondary" rx="5" ry="5" />
+  <rect x="70" y="485" width="530" height="10" fill="#1e40af" rx="5" ry="5" />
+  <circle cx="600" cy="490" r="8" fill="#1e40af" />
+  <text x="70" y="515" class="text text-small">2020-01-01</text>
+  <text x="1130" y="515" class="text text-small" text-anchor="end">2025-03-31</text>
+  <text x="600" y="535" class="text text-small text-center">📈 Evolução da ação ao longo dos anos</text>
+  
+  <!-- Gráfico principal -->
+  <rect x="70" y="550" width="1060" height="280" class="chart" />
+  
+  <!-- Linhas do gráfico -->
+  <polyline points="90,750 140,740 190,700 240,710 290,670 340,690 390,660 440,620 490,600 540,640 590,610 640,640 690,600 740,570 790,550 840,580 890,540 940,560 990,600 1040,570 1090,550" class="line" />
+  
+  <!-- Eixos e marcações -->
+  <line x1="90" y1="750" x2="1090" y2="750" stroke="#9ca3af" stroke-width="1" />
+  <line x1="90" y1="550" x2="90" y2="750" stroke="#9ca3af" stroke-width="1" />
+  
+  <text x="90" y="770" class="text text-small" text-anchor="middle">Jan 20</text>
+  <text x="340" y="770" class="text text-small" text-anchor="middle">Jan 21</text>
+  <text x="590" y="770" class="text text-small" text-anchor="middle">Jan 22</text>
+  <text x="840" y="770" class="text text-small" text-anchor="middle">Jan 23</text>
+  <text x="1090" y="770" class="text text-small" text-anchor="middle">Jan 24</text>
+  
+  <text x="70" y="750" class="text text-small" text-anchor="end">$0</text>
+  <text x="70" y="690" class="text text-small" text-anchor="end">$100</text>
+  <text x="70" y="630" class="text text-small" text-anchor="end">$150</text>
+  <text x="70" y="570" class="text text-small" text-anchor="end">$200</text>
+  
+  <!-- Segunda seção - Evolução personalizada -->
+  <text x="70" y="860" class="text text-medium" font-weight="bold">Análise de evolução escolhendo o início</text>
+  
+  <!-- Data de início -->
+  <text x="70" y="890" class="text text-small">Data de início:</text>
+  <rect x="180" y="870" width="200" height="40" class="input" />
+  <text x="210" y="895" class="text text-small">2025-01-01</text>
+  
+  <!-- Botões de ação -->
+  <rect x="400" y="870" width="120" height="40" class="button" />
+  <text x="460" y="895" class="text text-small text-center text-white">Analisar</text>
+  
+  <rect x="530" y="870" width="120" height="40" class="button-secondary" />
+  <text x="590" y="895" class="text text-small text-center">Reset</text>
+</svg>
