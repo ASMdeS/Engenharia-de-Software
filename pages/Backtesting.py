@@ -283,3 +283,4 @@ if stock_data is not None:
         st.write("Nenhuma operação foi gerada no período selecionado.")
 else:
     st.write("Por favor, insira um símbolo de ticker de ação válido.")
+    
