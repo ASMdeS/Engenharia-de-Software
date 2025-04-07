@@ -9,9 +9,9 @@ st.set_page_config(
     page_icon=':chart_with_upwards_trend:',
 )
 
-
-#Iniciando a variável
+# Iniciando a variável
 tickerChosen = None
+
 
 # Função para obter dados históricos de um ticker
 @st.cache_data
@@ -20,12 +20,14 @@ def get_ticker_data(ticker):
     stock_data = ticker_obj.history(period="max", interval="1d")  # Obtendo dados históricos
     return stock_data[['Close']]  # Retorna apenas a coluna de fechamento
 
+
 # Exibindo o título da página
 '''
 # :chart_with_upwards_trend: Análise de Ticker Financeiro
 
 Explore o desempenho do ticker no mercado financeiro.
 '''
+
 
 # Cálculo do RSI
 def calculate_rsi(data, window=14):
@@ -36,6 +38,7 @@ def calculate_rsi(data, window=14):
     rsi = 100 - (100 / (1 + rs))
     return rsi
 
+
 # Cálculo do MACD
 def calculate_macd(data, short_window=12, long_window=26, signal_window=9):
     short_ema = data.ewm(span=short_window, adjust=False).mean()
@@ -43,6 +46,7 @@ def calculate_macd(data, short_window=12, long_window=26, signal_window=9):
     macd = short_ema - long_ema
     signal = macd.ewm(span=signal_window, adjust=False).mean()
     return macd, signal
+
 
 # Definindo o ticker para análise
 def is_valid_ticker(ticker):
@@ -55,6 +59,7 @@ def is_valid_ticker(ticker):
         return 'longName' in info  # Se tiver nome da empresa, é válido
     except Exception:
         return False
+
 
 # Entrada do usuário
 ticker = st.text_input('Digite o Ticker:', 'AAPL')
@@ -94,10 +99,10 @@ if tickerChosen:
             st.write(f"Preço atual: {tickerChosen.info['currentPrice']} USD")
         else:
             st.write("Preço atual: Informação indisponível")
-#Validando o Ticker
+# Validando o Ticker
 if tickerChosen:
     # Informações sobre a empresa
-    summary =  tickerChosen.info['longBusinessSummary']
+    summary = tickerChosen.info['longBusinessSummary']
     st.markdown(
         f"""
         <div style="overflow-y: scroll; height: 200px; background-color: rgba(50, 50, 50, 0.9); border-radius: 5px; padding: 10px;">
@@ -109,12 +114,11 @@ if tickerChosen:
     ''
     ''
 
-
-
     # Exibindo métricas do ticker
     st.header(f'Métricas do Ticker {ticker}', divider='gray')
 
-    tabs = st.tabs(["Evolução de preços", "Dividendos e Descobramentos", "Informações Gerais", "Indicadores Técnicos", "FAQ"])
+    tabs = st.tabs(
+        ["Evolução de preços", "Dividendos e Descobramentos", "Informações Gerais", "Indicadores Técnicos", "FAQ"])
 
     # Tab 1
     with tabs[0]:
@@ -124,17 +128,17 @@ if tickerChosen:
         # Permitindo que o usuário selecione um intervalo de tempo
         st.subheader('Gráfico de evolução')
         from_date, to_date = st.slider(
-        '📈Evolução da ação ao longo dos anos',
-        min_value=min_date,
-        max_value=max_date,
-        value=[min_date, max_date],
-        format="YYYY-MM-DD"
+            '📈Evolução da ação ao longo dos anos',
+            min_value=min_date,
+            max_value=max_date,
+            value=[min_date, max_date],
+            format="YYYY-MM-DD"
         )
         # Filtrando os dados de acordo com a seleção de datas
         filtered_ticker_data = ticker_data[
             (ticker_data.index <= to_date)
             & (from_date <= ticker_data.index)
-        ]
+            ]
         # Evolução de preços
         st.line_chart(
             filtered_ticker_data,
@@ -143,17 +147,16 @@ if tickerChosen:
         st.subheader('Analise de evolução escolhendo o incio')
         startDat = st.text_input('Data de inicio', '2025-01-01')
         endDat = dt.date.today()
-        newTime = tickerChosen.history(start = startDat, end = endDat)
+        newTime = tickerChosen.history(start=startDat, end=endDat)
         st.dataframe(newTime)
         st.download_button('Download CSV', newTime.to_csv(), file_name='evolução.csv')
-
 
     # Tab 2
     with tabs[1]:
         # Dividendos Pagos anualmente
-        col1, col2= st.columns([1,1])
+        col1, col2 = st.columns([1, 1])
         with col1:
-            try: 
+            try:
                 dividendYeld = tickerChosen.info['dividendYield']
             except:
                 dividendYeld = None
@@ -162,7 +165,7 @@ if tickerChosen:
             else:
                 st.write(f"💰 Dividend Yield: Não informado")
         with col2:
-            try: 
+            try:
                 dividendRate = tickerChosen.info['dividendRate']
             except:
                 dividendRate = None
@@ -180,15 +183,15 @@ if tickerChosen:
     with tabs[2]:
         # Exbir informações contábeis
         st.subheader('📜 Informações Contábeis')
-        st.dataframe(tickerChosen.financials )
+        st.dataframe(tickerChosen.financials)
         st.download_button('Download CSV Contábil', tickerChosen.financials.to_csv(), file_name='financeiro.csv')
         st.subheader('💵 Informações de Caixa')
         st.dataframe(tickerChosen.cashflow)
         st.download_button('Download CSV Caixa', tickerChosen.cash_flow.to_csv(), file_name='caixa.csv')
 
-    #Tab 4
+    # Tab 4
     with tabs[3]:
-        #definindo um histórico de tempo menor para visualização otimizada
+        # definindo um histórico de tempo menor para visualização otimizada
         smallData = tickerChosen.history(period="3y", interval="1d")
         # informações técnicas
         smallData['SMA_50'] = smallData['Close'].rolling(window=50).mean()
@@ -199,7 +202,7 @@ if tickerChosen:
         smallData['MACD'], smallData['Signal'] = calculate_macd(smallData['Close'])
 
         # Gráfico com Médias Móveis
-        col1, col2, col3= st.columns([1,1,1])
+        col1, col2, col3 = st.columns([1, 1, 1])
         ''
         ''
         with col1:
@@ -215,66 +218,66 @@ if tickerChosen:
         st.subheader('📈 MACD - Moving Average Convergence Divergence')
         st.line_chart(smallData[['MACD', 'Signal']])
         st.subheader('Múltiplos Financeiros')
-    #Tab 5
+    # Tab 5
     with tabs[4]:
         st.header("📖 FAQ Financeiro - Termos Explicados")
         with st.expander("📈 O que é o P/E Ratio? (Preço sobre Lucro)"):
             st.write(
-            "O P/E Ratio (Price-to-Earnings Ratio) é um indicador que mostra "
-            "quanto os investidores estão dispostos a pagar por cada dólar de lucro da empresa. "
-            "Ele é calculado dividindo o preço da ação pelo lucro por ação (EPS)."
-        )
+                "O P/E Ratio (Price-to-Earnings Ratio) é um indicador que mostra "
+                "quanto os investidores estão dispostos a pagar por cada dólar de lucro da empresa. "
+                "Ele é calculado dividindo o preço da ação pelo lucro por ação (EPS)."
+            )
         with st.expander("📊 O que significa o P/B Ratio? (Preço sobre Valor Patrimonial)"):
             st.write(
-            "O P/B Ratio (Price-to-Book Ratio) compara o preço da ação com seu valor patrimonial por ação. "
-            "Se for maior que 1, significa que o mercado valoriza a empresa acima do seu patrimônio líquido."
-        )
+                "O P/B Ratio (Price-to-Book Ratio) compara o preço da ação com seu valor patrimonial por ação. "
+                "Se for maior que 1, significa que o mercado valoriza a empresa acima do seu patrimônio líquido."
+            )
         with st.expander("🏦 O que é o ROE? (Retorno sobre o Patrimônio)"):
             st.write(
-            "O ROE (Return on Equity) mede a rentabilidade de uma empresa em relação ao seu patrimônio líquido. "
-            "Ele indica o quão eficiente a empresa é em gerar lucro com seus próprios recursos."
-        )
+                "O ROE (Return on Equity) mede a rentabilidade de uma empresa em relação ao seu patrimônio líquido. "
+                "Ele indica o quão eficiente a empresa é em gerar lucro com seus próprios recursos."
+            )
 
         with st.expander("💰 O que é Dividend Yield?"):
             st.write(
-            "O Dividend Yield mostra o retorno em dividendos que um investidor recebe sobre o preço atual da ação. "
-            "É calculado dividindo o dividendo anual pago pela empresa pelo preço da ação."
-        )
+                "O Dividend Yield mostra o retorno em dividendos que um investidor recebe sobre o preço atual da ação. "
+                "É calculado dividindo o dividendo anual pago pela empresa pelo preço da ação."
+            )
 
         with st.expander("📉 O que é MACD? (Moving Average Convergence Divergence)"):
             st.write(
-            "O MACD é um indicador técnico que ajuda a identificar mudanças na tendência do preço de um ativo. "
-            "Ele compara duas médias móveis (geralmente de 12 e 26 períodos) e gera um sinal de compra ou venda."
-        )
+                "O MACD é um indicador técnico que ajuda a identificar mudanças na tendência do preço de um ativo. "
+                "Ele compara duas médias móveis (geralmente de 12 e 26 períodos) e gera um sinal de compra ou venda."
+            )
 
         with st.expander("📊 O que é RSI? (Índice de Força Relativa)"):
             st.write(
-            "O RSI (Relative Strength Index) mede a velocidade e a mudança dos movimentos de preço. "
-            "Ele varia entre 0 e 100, sendo que valores acima de 70 indicam sobrecompra e abaixo de 30 indicam sobrevenda."
-        )
+                "O RSI (Relative Strength Index) mede a velocidade e a mudança dos movimentos de preço. "
+                "Ele varia entre 0 e 100, sendo que valores acima de 70 indicam sobrecompra e abaixo de 30 indicam sobrevenda."
+            )
         with st.expander("📊 O que é a Evolução da Ação com Médias Móveis?"):
             st.write(
-            "A evolução da ação com médias móveis exibe o preço de fechamento do ativo ao longo do tempo, "
-            "juntamente com duas médias móveis: SMA (Simples) e EMA (Exponencial). "
-            "Essas médias ajudam a identificar tendências e possíveis pontos de compra e venda."
-        )
+                "A evolução da ação com médias móveis exibe o preço de fechamento do ativo ao longo do tempo, "
+                "juntamente com duas médias móveis: SMA (Simples) e EMA (Exponencial). "
+                "Essas médias ajudam a identificar tendências e possíveis pontos de compra e venda."
+            )
 
         with st.expander("📜 O que são informações contábeis?"):
             st.write(
-            "As informações contábeis exibem os demonstrativos financeiros da empresa, como "
-            "Receita, Lucro Bruto, EBITDA e outras métricas contábeis importantes. "
-            "É útil para analisar a saúde financeira da empresa ao longo do tempo."
-        )
+                "As informações contábeis exibem os demonstrativos financeiros da empresa, como "
+                "Receita, Lucro Bruto, EBITDA e outras métricas contábeis importantes. "
+                "É útil para analisar a saúde financeira da empresa ao longo do tempo."
+            )
 
         with st.expander("💵 O que são as informações de Caixa?"):
             st.write(
-            "As informações de caixa mostram o fluxo de caixa da empresa, incluindo as entradas e saídas de dinheiro de diferentes fontes. "
-            "Essa informação é essencial para entender se a empresa está gerando dinheiro suficiente para cobrir suas despesas."
-        )
+                "As informações de caixa mostram o fluxo de caixa da empresa, incluindo as entradas e saídas de dinheiro de diferentes fontes. "
+                "Essa informação é essencial para entender se a empresa está gerando dinheiro suficiente para cobrir suas despesas."
+            )
 
         with st.expander("🔀 O que significa Desdobramento das Ações?"):
             st.write(
-            "O desdobramento de ações (stock split) ocorre quando uma empresa divide suas ações existentes "
-            "em múltiplas ações novas, reduzindo o preço por ação sem alterar o valor total investido. "
-            "Isso pode aumentar a liquidez do papel e torná-lo mais acessível para investidores."
-        )
+                "O desdobramento de ações (stock split) ocorre quando uma empresa divide suas ações existentes "
+                "em múltiplas ações novas, reduzindo o preço por ação sem alterar o valor total investido. "
+                "Isso pode aumentar a liquidez do papel e torná-lo mais acessível para investidores."
+            )
